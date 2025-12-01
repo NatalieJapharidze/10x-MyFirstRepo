@@ -258,7 +258,7 @@ body.light-theme .moon-icon {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(90deg, #84FAB0 0%, #8FD3F4 100%);
+    background-color: gainsboro;
 
 }
 
@@ -266,8 +266,8 @@ body.light-theme .moon-icon {
     height: 100%;
     border-radius: 10px;
     width: 0;
-    background-color: #84FAB0;
-    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 255, 136, 0.3);
+    background: linear-gradient(90deg, #00ff88 0%, #00d4ff 100%);
 }
 
 .skill-item:hover .skill-progress {
@@ -290,45 +290,49 @@ body.light-theme .moon-icon {
     color: #292929;
 }
 
-.skill-circles {
+.circle-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .circle-item {
-    flex: 1;
-    min-width: 120px;
-    display: flex;
-    justify-content: center;
-}
-
-.circle-progress {
     position: relative;
     width: 70px;
     height: 70px;
-    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
 
+.circle-item:hover {
+    transform: scale(1.1);
+}
 .circle-svg {
     transform: rotate(-90deg);
 }
 
-.circle-bg {
+.circle-progress {
     fill: none;
-    stroke-width: 8;
-    opacity: 0.2;
-}
-
-.circle-fill {
-    fill: none;
+    stroke: url(#gradient);
     stroke-width: 8;
     stroke-linecap: round;
-    border-radius: 50%;
     stroke-dasharray: 314;
     stroke-dashoffset: 314;
-    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s ease;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.circle-item:hover .circle-progress {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.8));
+    stroke: url(#gradient-hover);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 8;
 }
 
 .circle-label {
@@ -336,10 +340,12 @@ body.light-theme .moon-icon {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "Anton", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 1px;
-    color: #292929;
+    color: #1a1a1a;
+    text-align: center;
+    pointer-events: none;
 }
 
 .circle-item:hover .circle-fill {
@@ -429,6 +435,15 @@ body.light-theme .moon-icon {
 .decorative-image img {
     width: 100%;
     height: auto;
+}
+
+@keyframes fillCircle {
+    from {
+        stroke-dashoffset: 314.159;
+    }
+    to {
+        stroke-dashoffset: var(--target-offset);
+    }
 }
 
 @media (max-width: 1024px) {
