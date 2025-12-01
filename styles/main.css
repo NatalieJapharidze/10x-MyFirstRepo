@@ -476,7 +476,7 @@ body.light-theme .moon-icon {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     body {
         padding: 0;
         align-items: flex-start;
