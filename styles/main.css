@@ -97,6 +97,7 @@ body.light-theme .moon-icon {
 
 .cv-header {
     display: flex;
+    flex-wrap: wrap;
     border-bottom: #9F9F9F solid 1px;
     gap: 40px;
     padding: 20px 40px;
@@ -123,6 +124,7 @@ body.light-theme .moon-icon {
 .header-title {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -160,6 +162,7 @@ body.light-theme .moon-icon {
     height: 80px;
     flex-shrink: 0;
     background-color: black;
+    transform: 0.1 ease;
 }
 
 .role-highlight {
@@ -453,6 +456,7 @@ body.light-theme .moon-icon {
 
     .cv-header {
         padding: 40px 50px;
+        justify-content: center;
     }
 
     .name {
@@ -495,7 +499,6 @@ body.light-theme .moon-icon {
     }
 
     .cv-header {
-        flex-direction: column;
         padding: 30px 20px;
         text-align: center;
     }
@@ -574,5 +577,15 @@ body.light-theme .moon-icon {
 
     .circle-label {
         font-size: 14px;
+    }
+    
+    .divider {
+        width: 100%;
+        height: 11px;
+        transform: 0.1 ease;
+    }
+    .name-container,
+    .role-container {
+        width: 100%;
     }
 }
