@@ -220,7 +220,6 @@ body.light-theme .moon-icon {
 .label {
     font-size: 10px;
     font-weight: 700;
-    text-transform: uppercase;
     color: #292929;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -364,12 +363,13 @@ body.light-theme .moon-icon {
 }
 
 .timeline::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 69px;
-    top: 0;
+    top: 10px;
     bottom: 0;
-    border: 0.1px solid black;
+    width: 0.1px;
+    background: gray;
 }
 
 .timeline-item {
@@ -381,14 +381,14 @@ body.light-theme .moon-icon {
 .timeline-year {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    left: -120px;
-    top: 0;
+    left: -140px;
+    top: -4px;
     font-size: 12px;
     font-weight: 700;
     padding: 8px 20px;
     border-radius: 8px;
     transition: all 0.3s ease;
-}
+    }
 
 .timeline-dot {
     position: absolute;
@@ -538,13 +538,17 @@ body.light-theme .moon-icon {
     }
 
     .timeline-year {
-        left: -80px;
+        left: -87px;
         font-size: 16px;
         padding: 5px 12px;
     }
 
     .timeline-dot {
-        left: -27px;
+        position: absolute;
+        left: -15px;
+        top: 8px;
+        width: 9px;
+        height: 9px;
     }
 
     .decorative-image {
