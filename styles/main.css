@@ -94,11 +94,10 @@ body.light-theme .moon-icon {
     border-radius: 30px;
 }
 
-
 .cv-header {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: #9F9F9F solid 1px;
+    border-bottom: solid 1px;
     gap: 40px;
     padding: 20px 40px;
 }
@@ -111,7 +110,6 @@ body.light-theme .moon-icon {
     border: #292929 0.5px solid;
     flex-shrink: 0;
     padding: 5px;
-
 }
 
 .profile-image img {
@@ -153,16 +151,12 @@ body.light-theme .moon-icon {
     font-weight: 400;
     margin: 0;
     padding: 0;
-    color: #292929;
 }
-
 
 .divider {
     width: 11px;
     height: 80px;
     flex-shrink: 0;
-    background-color: black;
-    transform: 0.1 ease;
 }
 
 .role-highlight {
@@ -185,8 +179,7 @@ body.light-theme .moon-icon {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    border-right: #9F9F9F solid 0.5px;
-
+    border-right: solid 0.5px;
 }
 
 .section-title {
@@ -195,9 +188,7 @@ body.light-theme .moon-icon {
     margin-bottom: 20px;
     letter-spacing: 1px;
     padding-bottom: 10px;
-    border-bottom: #9F9F9F solid 0.5px;
-    color: #292929;
-    gap: 5px;
+    border-bottom: solid 0.5px;
 }
 
 .personal-info,
@@ -207,30 +198,24 @@ body.light-theme .moon-icon {
     gap: 15px;
 }
 
-
 .info-item,
 .contact-item {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    border-bottom: #9F9F9F solid 0.2px;
+    border-bottom: solid 0.2px;
     padding-bottom: 5px;    
 }
 
 .label {
-    font-size: 12px;
-    font-weight: 700;
-    color: #292929;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 700;
 }
 
 .value {
-    font-size: 12px;
-    font-weight: 500;
-    color: #292929;
     font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
     font-weight: 300;
 }
 
@@ -260,8 +245,6 @@ body.light-theme .moon-icon {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    background-color: gainsboro;
-
 }
 
 .skill-progress {
@@ -289,7 +272,6 @@ body.light-theme .moon-icon {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 12px;
-    color: #292929;
     line-height: 120%;
 }
 
@@ -324,6 +306,7 @@ body.light-theme .moon-icon {
     stroke-dashoffset: 314;
     transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .circle-item:hover .circle-progress {
     filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.8));
     stroke: url(#gradient-hover);
@@ -331,7 +314,6 @@ body.light-theme .moon-icon {
 
 .circle-bg {
     fill: none;
-    stroke: #e0e0e0;
     stroke-width: 8;
 }
 
@@ -343,7 +325,6 @@ body.light-theme .moon-icon {
     font-family: "Anton", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #1a1a1a;
     text-align: center;
     pointer-events: none;
 }
@@ -367,13 +348,11 @@ body.light-theme .moon-icon {
     top: 10px;
     bottom: 0;
     width: 0.1px;
-    background: gray;
 }
 
 .timeline-item {
     position: relative;
     transition: transform 0.3s ease;
-    justify-content: center;
 }
 
 .timeline-year {
@@ -386,7 +365,7 @@ body.light-theme .moon-icon {
     padding: 8px 20px;
     border-radius: 8px;
     transition: all 0.3s ease;
-    }
+}
 
 .timeline-dot {
     position: absolute;
@@ -396,7 +375,6 @@ body.light-theme .moon-icon {
     height: 11px;
     border-radius: 50%;
     transition: all 0.3s ease;
-    background-color: #292929;
 }
 
 .timeline-content {
@@ -406,7 +384,6 @@ body.light-theme .moon-icon {
 .job-title {
     font-size: 12px;
     font-weight: 400;
-    color: #292929;
     line-height: 90%;
     transition: color 0.3s ease;
     margin-bottom: 5px;
@@ -438,15 +415,6 @@ body.light-theme .moon-icon {
     height: auto;
 }
 
-@keyframes fillCircle {
-    from {
-        stroke-dashoffset: 314.159;
-    }
-    to {
-        stroke-dashoffset: var(--target-offset);
-    }
-}
-
 @media (max-width: 1024px) {
     .cv-content {
         grid-template-columns: 300px 1fr;
@@ -455,14 +423,6 @@ body.light-theme .moon-icon {
     .cv-header {
         padding: 40px 50px;
         justify-content: center;
-    }
-
-    .name {
-        font-size: 56px;
-    }
-
-    .role {
-        font-size: 44px;
     }
 
     .sidebar {
@@ -506,14 +466,6 @@ body.light-theme .moon-icon {
         height: 120px;
     }
 
-    .name {
-        font-size: 36px;
-    }
-
-    .role {
-        font-size: 28px;
-    }
-
     .cv-content {
         grid-template-columns: 1fr;
     }
@@ -527,10 +479,6 @@ body.light-theme .moon-icon {
         padding: 30px 20px;
     }
 
-    .skill-circles {
-        justify-content: center;
-    }
-
     .timeline {
         padding-left: 80px;
     }
@@ -542,7 +490,6 @@ body.light-theme .moon-icon {
     }
 
     .timeline-dot {
-        position: absolute;
         left: -15px;
         top: 8px;
         width: 9px;
@@ -555,28 +502,6 @@ body.light-theme .moon-icon {
 }
 
 @media (max-width: 480px) {
-    .name {
-        font-size: 28px;
-    }
-
-    .role {
-        font-size: 22px;
-    }
-
-    .skill-circles {
-        gap: 15px;
-    }
-
-    .circle-progress {
-        width: 100px;
-        height: 100px;
-    }
-
-    .circle-svg {
-        width: 100px;
-        height: 100px;
-    }
-
     .circle-label {
         font-size: 14px;
     }
@@ -584,8 +509,8 @@ body.light-theme .moon-icon {
     .divider {
         width: 100%;
         height: 11px;
-        transform: 0.1 ease;
     }
+    
     .name-container,
     .role-container {
         width: 100%;
